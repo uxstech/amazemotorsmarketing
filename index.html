@@ -7,11 +7,28 @@
     <title>Amaze Motor Driving School</title>
     <link rel="shortcut icon" type="image/svg" href="assets/drivingcourse.svg" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 
 <style>
     html {
         scroll-behavior: smooth;
+    }
+
+    .img-hover-zoom {
+        /* [1.1] Set it as per your need */
+        overflow: hidden;
+        /* [1.2] Hide the overflowing of child elements */
+    }
+
+    /* [2] Transition property for smooth transformation of images */
+    .img-hover-zoom img {
+        transition: transform .5s ease;
+    }
+
+    /* [3] Finally, transforming the image when container gets hovered */
+    .img-hover-zoom:hover img {
+        transform: scale(1.3);
     }
 </style>
 
@@ -69,11 +86,13 @@
                         <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
                             <div>
                                 <div>
-                                    <h1 class="text-4xl font-bold tracking-tight text-center sm:text-6xl">
-                                        Learn to
-                                        <span style="color: #ECAF12"> drive </span> with
-                                        confidence
-                                    </h1>
+                                    <marquee scrollamount="20">
+                                        <h1 class="text-4xl font-bold tracking-tight text-center sm:text-6xl">
+                                            Learn to
+                                            <span style="color: #ECAF12"> drive </span> with
+                                            confidence
+                                        </h1>
+                                    </marquee>
                                     <p class="mt-6 text-lg leading-8 text-gray-600 text-center">Welcome to Amaze
                                         Motor
                                         Driving School, our meticulously designed
@@ -123,7 +142,7 @@
                         </div>
                     </div>
                     <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-                        <div class="p-4 md:w-[32%] sm:mb-0 mb-6 shadow-xl">
+                        <div class="p-4 md:w-[32%] sm:mb-0 mb-6 shadow-xl  img-hover-zoom">
                             <div class="rounded-lg h-64 overflow-hidden">
                                 <img alt="content" class="object-cover object-center h-full w-full"
                                     src="assets/drivingcourse.svg">
@@ -136,7 +155,7 @@
                                 on road.
                             </p>
                         </div>
-                        <div class="p-4 md:w-[32%] sm:mb-0 mb-6 mr-2 ml-2 shadow-xl">
+                        <div class="p-4 md:w-[32%] sm:mb-0 mb-6 mr-2 ml-2 shadow-xl  img-hover-zoom">
                             <div class="rounded-lg h-64 overflow-hidden">
                                 <img alt="content" class="object-cover object-center h-full w-full"
                                     src="assets/makinglicense.svg">
@@ -149,7 +168,7 @@
                                 to
                                 permanant license is done smoothly.</p>
                         </div>
-                        <div class="p-4 md:w-[32%] sm:mb-0 mb-6 shadow-xl">
+                        <div class="p-4 md:w-[32%] sm:mb-0 mb-6 shadow-xl  img-hover-zoom">
                             <div class="rounded-lg h-64 overflow-hidden">
                                 <img alt="content" class="object-cover object-center h-full w-full"
                                     src="assets/rtorelatedservices.svg">
@@ -182,19 +201,19 @@
                     </div>
                     <div class="flex flex-wrap md:-m-8 -m-8">
                         <div class="flex flex-wrap w-1/3">
-                            <div class="md:p-2 p-1 w-full">
+                            <div class="md:p-1 p-1 w-full img-hover-zoom">
                                 <img alt="gallery" class="w-full object-cover h-full object-center block"
                                     src="assets/amazecar.webp">
                             </div>
                         </div>
                         <div class="flex flex-wrap w-1/3">
-                            <div class="md:p-2 p-1 w-full">
+                            <div class="md:p-8 p-1 w-full img-hover-zoom">
                                 <img alt="gallery" class="w-full h-full object-cover object-center block"
                                     src="assets/swiftcar.png">
                             </div>
                         </div>
                         <div class="flex flex-wrap w-1/3">
-                            <div class="md:p-2 p-1 w-full">
+                            <div class="md:p-2 p-1 w-full img-hover-zoom">
                                 <img alt="gallery" class="w-full h-full object-cover object-center block"
                                     src="assets/wagonrcar.png">
                             </div>
@@ -219,29 +238,46 @@
                     <div class="flex flex-wrap -m-4 text-center">
                         <div class="p-1 md:w-1/4 sm:w-1/2 w-full">
                             <div class="border-2 border-gray-200 px-4 py-6 rounded-full">
-                                <h2 class="title-font font-medium text-3xl text-gray-900"><span style="color: #ECAF12">
-                                        <b>400+</b></span></h2>
+                                <h2 class="title-font font-medium text-3xl text-gray-900">
+                                    <span style="color: #ECAF12">
+                                        <b>
+                                            <p class="counter">400</p>
+                                        </b>
+                                    </span>
+                                </h2>
                                 <p class="leading-relaxed">5 Star Reviews</p>
                             </div>
                         </div>
                         <div class="p-1 md:w-1/4 sm:w-1/2 w-full">
                             <div class="border-2 border-gray-200 px-4 py-6 rounded-full">
                                 <h2 class="title-font font-medium text-3xl text-gray-900"><span style="color: #ECAF12">
-                                        <b>1.7K+</b></span></h2>
+                                        <b>
+                                            <p class="counter">1700</p>
+                                        </b>
+                                    </span>
+                                </h2>
                                 <p class="leading-relaxed">Happy Clients</p>
                             </div>
                         </div>
                         <div class="p-1 md:w-1/4 sm:w-1/2 w-full">
                             <div class="border-2 border-gray-200 px-4 py-6 rounded-full">
                                 <h2 class="title-font font-medium text-3xl text-gray-900"><span style="color: #ECAF12">
-                                        <b>2+</b></span></h2>
-                                <p class="leading-relaxed">Experience</p>
+                                        <b>
+                                            <p class="counter">2</p>
+                                        </b>
+                                    </span>
+                                </h2>
+                                <p class="leading-relaxed">Years of Experience</p>
                             </div>
                         </div>
                         <div class="p-1 md:w-1/4 sm:w-1/2 w-full">
                             <div class="border-2 border-gray-200 px-4 py-6 rounded-full">
                                 <h2 class="title-font font-medium text-3xl text-gray-900"><span style="color: #ECAF12">
-                                        <b>5+</b></span></h2>
+                                        <b>
+                                            <p class="counter">5</p>
+                                        </b>
+                                    </span>
+                                </h2>
                                 <p class="leading-relaxed">Expert Trainers</p>
                             </div>
                         </div>
@@ -644,6 +680,17 @@
                     </span>
                 </div>
             </footer>
+
+            <script src="jquery.counterup.min.js"></script>
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+            <script>
+                jQuery(document).ready(function ($) {
+                    $('.counter').counterUp({
+                        delay: 10,
+                        time: 1000
+                    });
+                });
+            </script>
 </body>
 
 </html>
